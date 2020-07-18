@@ -16,7 +16,9 @@ Here are some ideas to get you started:
 <details open>
 	<summary align="center"><samp>what i've been listening to recently</samp></summary>
 	<hr />
+
 	# hello
+	
 	1 | 2 | 3 | 4
 	--- | --- | --- | ---
 	
