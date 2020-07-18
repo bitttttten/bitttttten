@@ -1,5 +1,3 @@
-### Hi there 👋
-
 <!--
 **bitttttten/bitttttten** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -15,7 +13,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-<details>
+<details open>
 	<summary align="center"><samp>what i've been listening to recently</samp></summary>
 	<hr />
 	<p>hello</p>
