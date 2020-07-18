@@ -14,3 +14,9 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+<details>
+	<summary align="center"><samp>what i've been listening to recently</samp></summary>
+	<hr />
+	<p>hello</p>
+</details>
