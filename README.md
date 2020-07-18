@@ -14,16 +14,17 @@ Here are some ideas to get you started:
 -->
 
 <details open>
-	<summary align="center"><samp>what i've been listening to recently</samp></summary>
-	<hr />
-	<div class="border d-inline-flex">
-	  <div class="p-5 border bg-gray-light">flex item 1</div>
-	  <div class="p-5 border bg-gray-light">flex item 2</div>
-	  <div class="p-5 border bg-gray-light">flex item 3</div>
-	</div>
-	<div style="display:flex;">
-	  <div>flex item 1</div>
-	  <div>flex item 2</div>
-	  <div>flex item 3</div>
-	</div>
+
+<summary align="center"><samp>what i've been listening to recently</samp></summary>
+<hr />
+
+<!-- toc -->
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+<!-- tocstop -->
+
 </details>
