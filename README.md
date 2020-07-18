@@ -20,10 +20,9 @@ Here are some ideas to get you started:
 
 <!-- toc -->
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| [Phoebe Bridgers](https://www.last.fm/music/Phoebe+Bridgers) | [Phoebe Bridgers](https://www.last.fm/music/Phoebe+Bridgers) | [Phoebe Bridgers](https://www.last.fm/music/Phoebe+Bridgers) | [Phoebe Bridgers](https://www.last.fm/music/Phoebe+Bridgers) |
+| ------------- | ------------- | ------------- | ------------- |
+| ![https://lastfm.freetls.fastly.net/i/u/avatar300s/326e0315a5cbc1e92a1de7dfc51444dd.webp](https://www.last.fm/music/Phoebe+Bridgers) | ![https://lastfm.freetls.fastly.net/i/u/avatar300s/326e0315a5cbc1e92a1de7dfc51444dd.webp](https://www.last.fm/music/Phoebe+Bridgers) | ![https://lastfm.freetls.fastly.net/i/u/avatar300s/326e0315a5cbc1e92a1de7dfc51444dd.webp](https://www.last.fm/music/Phoebe+Bridgers) | ![https://lastfm.freetls.fastly.net/i/u/avatar300s/326e0315a5cbc1e92a1de7dfc51444dd.webp](https://www.last.fm/music/Phoebe+Bridgers) |
 
 <!-- tocstop -->
 
