@@ -22,7 +22,7 @@ Here are some ideas to get you started:
 
 | [Phoebe Bridgers](https://www.last.fm/music/Phoebe+Bridgers) | [Phoebe Bridgers](https://www.last.fm/music/Phoebe+Bridgers) | [Phoebe Bridgers](https://www.last.fm/music/Phoebe+Bridgers) | [Phoebe Bridgers](https://www.last.fm/music/Phoebe+Bridgers) |
 | ------------- | ------------- | ------------- | ------------- |
-| ![https://lastfm.freetls.fastly.net/i/u/avatar300s/326e0315a5cbc1e92a1de7dfc51444dd.jpg](https://www.last.fm/music/Phoebe+Bridgers) | ![https://lastfm.freetls.fastly.net/i/u/avatar300s/326e0315a5cbc1e92a1de7dfc51444dd.jpg](https://www.last.fm/music/Phoebe+Bridgers) | ![https://lastfm.freetls.fastly.net/i/u/avatar300s/326e0315a5cbc1e92a1de7dfc51444dd.jpg](https://www.last.fm/music/Phoebe+Bridgers) | ![https://lastfm.freetls.fastly.net/i/u/avatar300s/326e0315a5cbc1e92a1de7dfc51444dd.jpg](https://www.last.fm/music/Phoebe+Bridgers) |
+| ![https://www.last.fm/music/Phoebe+Bridgers](https://lastfm.freetls.fastly.net/i/u/avatar300s/326e0315a5cbc1e92a1de7dfc51444dd.jpg) | ![https://www.last.fm/music/Phoebe+Bridgers](https://lastfm.freetls.fastly.net/i/u/avatar300s/326e0315a5cbc1e92a1de7dfc51444dd.jpg) | ![https://www.last.fm/music/Phoebe+Bridgers](https://lastfm.freetls.fastly.net/i/u/avatar300s/326e0315a5cbc1e92a1de7dfc51444dd.jpg) | ![https://www.last.fm/music/Phoebe+Bridgers](https://lastfm.freetls.fastly.net/i/u/avatar300s/326e0315a5cbc1e92a1de7dfc51444dd.jpg) |
 
 <!-- tocstop -->
 
