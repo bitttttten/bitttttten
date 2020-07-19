@@ -11,9 +11,9 @@
 
 </details>
 
-<details open>
+<details>
 
-<summary align="center"><samp>what i've recently 🥰 listening to</samp></summary>
+<summary align="center"><samp>what i've been recently ❤️ing 🎵🎶</samp></summary>
 <hr />
 
 <!-- toc -->
