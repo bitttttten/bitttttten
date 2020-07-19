@@ -1,5 +1,18 @@
 <details open>
 
+<summary align="center"><samp>my favourite music at the moment 🎵🎶</samp></summary>
+<hr />
+
+<!-- toc -->
+
+<!-- topartists -->
+
+<!-- tocstop -->
+
+</details>
+
+<details>
+
 <summary align="center"><samp>what i've been listening to recently 🎵🎶</samp></summary>
 <hr />
 
@@ -13,7 +26,7 @@
 
 <details>
 
-<summary align="center"><samp>what i've been recently ❤️ing 🎵🎶</samp></summary>
+<summary align="center"><samp>what i've been ❤️ing 🎵🎶</samp></summary>
 <hr />
 
 <!-- toc -->

@@ -1,6 +1,6 @@
 <details open>
 
-<summary align="center"><samp>what i've been listening to recently 🎵🎶</samp></summary>
+<summary align="center"><samp>my favourite music at the moment 🎵🎶</samp></summary>
 <hr />
 
 <!-- toc -->
@@ -15,14 +15,29 @@
 
 <details>
 
-<summary align="center"><samp>what i've been recently ❤️ing 🎵🎶</samp></summary>
+<summary align="center"><samp>what i've been listening to recently 🎵🎶</samp></summary>
 <hr />
 
 <!-- toc -->
 
-| [You Are Here<br />Yo La Tengo](https://open.spotify.com/album/1PP5mb8VOZfofwDzHRQPYh)                                                                          | [Red Bottom Sky<br />Yung Lean](https://open.spotify.com/album/6pbfofGywFkDyt1HoKYnRd)                                                                          | [Boreal Kiss Pt. 1<br />Tim Hecker](https://open.spotify.com/album/5MZRB9G4snRWIG0otfxJYq)                                                                      | [Scott Street<br />Phoebe Bridgers](https://open.spotify.com/album/1p16WxrdVBNIAAxbpZMWJR)                                                                      |
+| [Come to Me Now<br />Kevin Morby](https://open.spotify.com/track/5h1WO9jqXhQ9e1vs63ctxZ)                                                                        | [Garden Song<br />Phoebe Bridgers](https://open.spotify.com/track/5uQRmdIqyMmKPWJcot4UmV)                                                                       | [Andromeda<br />Weyes Blood](https://open.spotify.com/track/3NQMi6VzmxmKeqhcbE02WI)                                                                             | [Body<br />Julia Jacklin](https://open.spotify.com/track/7tktvSIhAG4DIwVHTRUWnr)                                                                                |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<img src="https://i.scdn.co/image/ab67616d0000b273a3251b78e1c852c9d203a508" width="320" height="auto">](https://open.spotify.com/album/1PP5mb8VOZfofwDzHRQPYh) | [<img src="https://i.scdn.co/image/ab67616d0000b273fe81407d98ef67144560b96d" width="320" height="auto">](https://open.spotify.com/album/6pbfofGywFkDyt1HoKYnRd) | [<img src="https://i.scdn.co/image/ab67616d0000b273881b27cb9444c898d6a19004" width="320" height="auto">](https://open.spotify.com/album/5MZRB9G4snRWIG0otfxJYq) | [<img src="https://i.scdn.co/image/ab67616d0000b2732a5edd6218037175ddf7c2c8" width="320" height="auto">](https://open.spotify.com/album/1p16WxrdVBNIAAxbpZMWJR) |
+| [<img src="https://i.scdn.co/image/f1bc47bef58e1fb37db27db793a25943cbe55f32" width="320" height="auto">](https://open.spotify.com/track/5h1WO9jqXhQ9e1vs63ctxZ) | [<img src="https://i.scdn.co/image/1c90d650ee787a51e18e475584b595c9234eac48" width="320" height="auto">](https://open.spotify.com/track/5uQRmdIqyMmKPWJcot4UmV) | [<img src="https://i.scdn.co/image/8416f9615877105bdbaf8e6c69f70f84864f80cf" width="320" height="auto">](https://open.spotify.com/track/3NQMi6VzmxmKeqhcbE02WI) | [<img src="https://i.scdn.co/image/8da54745153d91af07ef1530668687fbb2f8a45f" width="320" height="auto">](https://open.spotify.com/track/7tktvSIhAG4DIwVHTRUWnr) |
+
+<!-- tocstop -->
+
+</details>
+
+<details>
+
+<summary align="center"><samp>what i've been ❤️ing 🎵🎶</samp></summary>
+<hr />
+
+<!-- toc -->
+
+| [Night on Earth<br />Jerkcurb](https://open.spotify.com/album/0ZGJ6N2TbWJwUKHTBLxK7H)                                                                           | [Halloween<br />Phoebe Bridgers](https://open.spotify.com/album/2xECuqnvvmVktV7UO8Dd3s)                                                                         | [You Are Here<br />Yo La Tengo](https://open.spotify.com/album/1PP5mb8VOZfofwDzHRQPYh)                                                                          | [Red Bottom Sky<br />Yung Lean](https://open.spotify.com/album/6pbfofGywFkDyt1HoKYnRd)                                                                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<img src="https://i.scdn.co/image/ab67616d0000b273133265e744cf977263d1fd3b" width="320" height="auto">](https://open.spotify.com/album/0ZGJ6N2TbWJwUKHTBLxK7H) | [<img src="https://i.scdn.co/image/ab67616d0000b2733040ca980277cf1445934add" width="320" height="auto">](https://open.spotify.com/album/2xECuqnvvmVktV7UO8Dd3s) | [<img src="https://i.scdn.co/image/ab67616d0000b273a3251b78e1c852c9d203a508" width="320" height="auto">](https://open.spotify.com/album/1PP5mb8VOZfofwDzHRQPYh) | [<img src="https://i.scdn.co/image/ab67616d0000b273fe81407d98ef67144560b96d" width="320" height="auto">](https://open.spotify.com/album/6pbfofGywFkDyt1HoKYnRd) |
 
 <!-- tocstop -->
 
