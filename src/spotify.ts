@@ -5,9 +5,9 @@ import * as log from "https://deno.land/std/log/mod.ts"
 
 config({ export: true })
 
-const SPOTIFY_CLIENT_ID = `${Deno.env.get("SPOTIFY_CLIENT_ID")}`
-const SPOTIFY_REFRESH_TOKEN = `${Deno.env.get("SPOTIFY_REFRESH_TOKEN")}`
-const SPOTIFY_CLIENT_SECRET = `${Deno.env.get("SPOTIFY_CLIENT_SECRET")}`
+const SPOTIFY_CLIENT_ID = Deno.env.get("SPOTIFY_CLIENT_ID")
+const SPOTIFY_REFRESH_TOKEN = Deno.env.get("SPOTIFY_REFRESH_TOKEN")
+const SPOTIFY_CLIENT_SECRET = Deno.env.get("SPOTIFY_CLIENT_SECRET")
 
 log.info(
 	SPOTIFY_CLIENT_ID
