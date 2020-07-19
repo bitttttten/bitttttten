@@ -2,11 +2,11 @@ import { Base64 } from "https://deno.land/x/bb64/mod.ts"
 import { config } from "https://deno.land/x/dotenv/mod.ts"
 import { SpotifyTopArtistsResponse } from "../types/types.d.ts"
 
-const {
-	SPOTIFY_CLIENT_ID,
-	SPOTIFY_REFRESH_TOKEN,
-	SPOTIFY_CLIENT_SECRET,
-} = config()
+config({ export: true })
+
+const SPOTIFY_CLIENT_ID = Deno.env.get("SPOTIFY_CLIENT_ID")
+const SPOTIFY_REFRESH_TOKEN = Deno.env.get("SPOTIFY_REFRESH_TOKEN")
+const SPOTIFY_CLIENT_SECRET = Deno.env.get("SPOTIFY_CLIENT_SECRET")
 
 const token = Base64.fromString(
 	`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`
