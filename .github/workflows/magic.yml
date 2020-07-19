@@ -14,7 +14,11 @@ jobs:
               with:
                   deno-version: v1.x
             - name: Make changes
-              run: deno run --allow-read=./src,./types,.env,.env.defaults,README.template.md --allow-write --allow-net --unstable src/magic.ts
+              env:
+                  SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+                  SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+                  SPOTIFY_ACCESS_TOKEN: ${{ secrets.SPOTIFY_ACCESS_TOKEN }}
+              run: deno run --allow-read=./src,./types,.env,.env.defaults,README.template.md --allow-write --allow-env --allow-net --unstable src/magic.ts
             - name: Commit files
               run: git commit -m "updating readme" -a
             - name: Push changes
