@@ -10,3 +10,16 @@
 <!-- tocstop -->
 
 </details>
+
+<details open>
+
+<summary align="center"><samp>what i've recently 🥰 listening to</samp></summary>
+<hr />
+
+<!-- toc -->
+
+<!-- recentlyloved -->
+
+<!-- tocstop -->
+
+</details>
