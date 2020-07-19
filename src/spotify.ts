@@ -3,6 +3,8 @@ import { config } from "https://deno.land/x/dotenv/mod.ts"
 import {
 	SpotifyTopArtistsResponse,
 	SavedTracksResponse,
+	RecentlyPlayedTracksResponse,
+	ArtistByIdResponse,
 } from "../types/types.d.ts"
 import * as log from "https://deno.land/std/log/mod.ts"
 
@@ -12,21 +14,14 @@ const SPOTIFY_CLIENT_ID = Deno.env.get("SPOTIFY_CLIENT_ID")
 const SPOTIFY_REFRESH_TOKEN = Deno.env.get("SPOTIFY_REFRESH_TOKEN")
 const SPOTIFY_CLIENT_SECRET = Deno.env.get("SPOTIFY_CLIENT_SECRET")
 
-log.info(
-	SPOTIFY_CLIENT_ID
-		? `Has SPOTIFY_CLIENT_ID`
-		: `Does not have SPOTIFY_CLIENT_ID`
-)
-log.info(
-	SPOTIFY_REFRESH_TOKEN
-		? `Has SPOTIFY_REFRESH_TOKEN`
-		: `Does not have SPOTIFY_REFRESH_TOKEN`
-)
-log.info(
-	SPOTIFY_CLIENT_SECRET
-		? `Has SPOTIFY_CLIENT_SECRET`
-		: `Does not have SPOTIFY_CLIENT_SECRET`
-)
+// debugging
+for (const [key, value] of Object.entries({
+	SPOTIFY_CLIENT_ID,
+	SPOTIFY_REFRESH_TOKEN,
+	SPOTIFY_CLIENT_SECRET,
+})) {
+	log.info(value ? `Has ${key}` : `Does not have ${key}`)
+}
 
 const token = Base64.fromString(
 	`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`
@@ -36,6 +31,28 @@ const Authorization = `Basic ${token}`
 const AUTH_ENDPOINT = `https://accounts.spotify.com/api/token`
 const TOP_ARTISTS_ENDPOINT = `https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=4`
 const SAVED_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/tracks?limit=4`
+const RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played`
+const ARTIST_BY_ID_ENDPOINT = `https://api.spotify.com/v1/artists/{id}`
+
+const fetcher: <T>(url: string) => Promise<T> = async (url) => {
+	const Authorization = await getAuthorizationToken()
+	const response = await fetch(url, {
+		headers: {
+			Authorization,
+		},
+	})
+
+	const { status } = response
+
+	log.info(`Status for ${url}: ${status}`)
+
+	if (status === 204) {
+		return {}
+	} else if (status === 200) {
+		const data = await response.json()
+		return data
+	}
+}
 
 export async function getAuthorizationToken() {
 	const response = await fetch(AUTH_ENDPOINT, {
@@ -52,46 +69,14 @@ export async function getAuthorizationToken() {
 	return `Bearer ${data.access_token}`
 }
 
-export const getTopArtists: () => Promise<
-	SpotifyTopArtistsResponse
-> = async () => {
-	const Authorization = await getAuthorizationToken()
-	const response = await fetch(TOP_ARTISTS_ENDPOINT, {
-		headers: {
-			Authorization,
-		},
-	})
+export const getTopArtists = async () =>
+	fetcher<SpotifyTopArtistsResponse>(TOP_ARTISTS_ENDPOINT)
 
-	const { status } = response
+export const getRecentlyLovedTracks = async () =>
+	fetcher<SavedTracksResponse>(SAVED_TRACKS_ENDPOINT)
 
-	log.info(`Status for top artists: ${status}`)
+export const getRecentlyPlayedTracks = async () =>
+	fetcher<RecentlyPlayedTracksResponse>(RECENTLY_PLAYED_ENDPOINT)
 
-	if (status === 204) {
-		return {}
-	} else if (status === 200) {
-		const data = await response.json()
-		return data
-	}
-}
-
-export const getRecentlyLovedTracks: () => Promise<
-	SavedTracksResponse
-> = async () => {
-	const Authorization = await getAuthorizationToken()
-	const response = await fetch(SAVED_TRACKS_ENDPOINT, {
-		headers: {
-			Authorization,
-		},
-	})
-
-	const { status } = response
-
-	log.info(`Status for recently loved: ${status}`)
-
-	if (status === 204) {
-		return {}
-	} else if (status === 200) {
-		const data = await response.json()
-		return data
-	}
-}
+export const getArtistById = async (id: string) =>
+	fetcher<ArtistByIdResponse>(ARTIST_BY_ID_ENDPOINT.replace("{id}", id))
