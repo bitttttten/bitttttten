@@ -18,9 +18,11 @@ jobs:
                   SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
                   SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
                   SPOTIFY_ACCESS_TOKEN: ${{ secrets.SPOTIFY_ACCESS_TOKEN }}
-              run: deno run --allow-read=./src,./types,.env,.env.defaults,README.template.md --allow-write --allow-env --allow-net --unstable src/magic.ts
+              run: |
+                  deno run --allow-read=./src,./types,.env,.env.defaults,README.template.md --allow-write --allow-env --allow-net --unstable src/magic.ts
             - name: Commit files
-              run: git commit -m "updating readme" -a
+              run: |
+                  git commit -m "updating readme" -a
             - name: Push changes
               uses: ad-m/github-push-action@master
               with:

@@ -5,11 +5,9 @@ import * as log from "https://deno.land/std/log/mod.ts"
 
 config({ export: true })
 
-const SPOTIFY_CLIENT_ID = Deno.env.get("SPOTIFY_CLIENT_ID")
-const SPOTIFY_REFRESH_TOKEN = Deno.env.get("SPOTIFY_REFRESH_TOKEN")
-const SPOTIFY_CLIENT_SECRET = Deno.env.get("SPOTIFY_CLIENT_SECRET")
-
-log.info(SPOTIFY_CLIENT_ID.substring(0, 2))
+const SPOTIFY_CLIENT_ID = `${Deno.env.get("SPOTIFY_CLIENT_ID")}`
+const SPOTIFY_REFRESH_TOKEN = `${Deno.env.get("SPOTIFY_REFRESH_TOKEN")}`
+const SPOTIFY_CLIENT_SECRET = `${Deno.env.get("SPOTIFY_CLIENT_SECRET")}`
 
 const token = Base64.fromString(
 	`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`
@@ -46,7 +44,7 @@ export const getTopArtists: () => Promise<
 
 	const { status } = response
 
-	log.info(status)
+	log.info(`Status: ${status}`)
 
 	if (status === 204) {
 		return {}
