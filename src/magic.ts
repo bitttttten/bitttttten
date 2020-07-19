@@ -4,8 +4,6 @@ import { Markdown } from "https://deno.land/x/deno_markdown/mod.ts"
 import { LocalArtist } from "../types/types.d.ts"
 import { getTopArtists, getRecentlyLovedTracks } from "./spotify.ts"
 
-import * as log from "https://deno.land/std/log/mod.ts"
-
 const generateHeader = (artist: LocalArtist) =>
 	`[${artist.name}](${artist.url})`
 const generateImage = (artist: LocalArtist) =>
