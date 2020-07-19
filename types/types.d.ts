@@ -104,3 +104,94 @@ export interface SavedTracksResponse {
 	previous?: any
 	total: number
 }
+
+export interface RecentlyPlayedTracksArtistExternalUrls {
+	spotify: string
+}
+
+export interface RecentlyPlayedTracksArtist {
+	external_urls: RecentlyPlayedTracksArtistExternalUrls
+	href: string
+	id: string
+	name: string
+	type: string
+	uri: string
+}
+
+export interface RecentlyPlayedTracksTrackExternalUrls {
+	spotify: string
+}
+
+export interface RecentlyPlayedTracksTrack {
+	artists: RecentlyPlayedTracksArtist[]
+	available_markets: string[]
+	disc_number: number
+	duration_ms: number
+	explicit: boolean
+	external_urls: RecentlyPlayedTracksTrackExternalUrls
+	href: string
+	id: string
+	name: string
+	preview_url: string
+	track_number: number
+	type: string
+	uri: string
+}
+
+export interface RecentlyPlayedTracksContextExternalUrls {
+	spotify: string
+}
+
+export interface RecentlyPlayedTracksContext {
+	uri: string
+	external_urls: RecentlyPlayedTracksContextExternalUrls
+	href: string
+	type: string
+}
+
+export interface RecentlyPlayedTracksItem {
+	track: RecentlyPlayedTracksTrack
+	played_at: Date
+	context: RecentlyPlayedTracksContext
+}
+
+export interface RecentlyPlayedTracksCursors {
+	after: string
+	before: string
+}
+
+export interface RecentlyPlayedTracksResponse {
+	items: RecentlyPlayedTracksItem[]
+	next: string
+	cursors: RecentlyPlayedTracksCursors
+	limit: number
+	href: string
+}
+
+export interface ArtistByIdExternalUrls {
+	spotify: string
+}
+
+export interface ArtistByIdFollowers {
+	href?: any
+	total: number
+}
+
+export interface ArtistByIdImage {
+	height: number
+	url: string
+	width: number
+}
+
+export interface ArtistByIdResponse {
+	external_urls: ArtistByIdExternalUrls
+	followers: ArtistByIdFollowers
+	genres: string[]
+	href: string
+	id: string
+	images: ArtistByIdImage[]
+	name: string
+	popularity: number
+	type: string
+	uri: string
+}
