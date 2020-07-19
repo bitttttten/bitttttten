@@ -1,27 +1,26 @@
-export interface ArtistAttr {
-	rank: string;
+export interface Image {
+	height: number
+	url: string
+	width: number
 }
 
-export interface Artist {
-	"@attr": ArtistAttr;
-	mbid: string;
-	playcount: string;
-	name: string;
-	url: string;
+export interface Item {
+	images: Image[]
+	name: string
+	external_urls: ExternalUrls
 }
 
-export interface WeeklyArtistChartResponseAttr {
-	user: string;
-	from: string;
-	to: string;
+export interface ExternalUrls {
+	spotify: string
 }
 
-export interface WeeklyArtistChartResponse {
-	artist: Artist[];
-	"@attr": WeeklyArtistChartResponseAttr;
+export interface SpotifyTopArtistsResponse {
+	items: Item[]
+	total: number
 }
 
-export interface UserGetWeeklyAristChart {
-	weeklyartistchart: WeeklyArtistChartResponse;
+export interface LocalArtist {
+	name: string
+	image: string
+	url: string
 }
-
