@@ -9,6 +9,22 @@ const SPOTIFY_CLIENT_ID = `${Deno.env.get("SPOTIFY_CLIENT_ID")}`
 const SPOTIFY_REFRESH_TOKEN = `${Deno.env.get("SPOTIFY_REFRESH_TOKEN")}`
 const SPOTIFY_CLIENT_SECRET = `${Deno.env.get("SPOTIFY_CLIENT_SECRET")}`
 
+log.info(
+	SPOTIFY_CLIENT_ID
+		? `Has SPOTIFY_CLIENT_ID`
+		: `Does not have SPOTIFY_CLIENT_ID`
+)
+log.info(
+	SPOTIFY_REFRESH_TOKEN
+		? `Has SPOTIFY_REFRESH_TOKEN`
+		: `Does not have SPOTIFY_REFRESH_TOKEN`
+)
+log.info(
+	SPOTIFY_CLIENT_SECRET
+		? `Has SPOTIFY_CLIENT_SECRET`
+		: `Does not have SPOTIFY_CLIENT_SECRET`
+)
+
 const token = Base64.fromString(
 	`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`
 ).toString()
