@@ -1,6 +1,9 @@
 import { Base64 } from "https://deno.land/x/bb64/mod.ts"
 import { config } from "https://deno.land/x/dotenv/mod.ts"
-import { SpotifyTopArtistsResponse } from "../types/types.d.ts"
+import {
+	SpotifyTopArtistsResponse,
+	SavedTracksResponse,
+} from "../types/types.d.ts"
 import * as log from "https://deno.land/std/log/mod.ts"
 
 config({ export: true })
@@ -32,6 +35,7 @@ const Authorization = `Basic ${token}`
 
 const AUTH_ENDPOINT = `https://accounts.spotify.com/api/token`
 const TOP_ARTISTS_ENDPOINT = `https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=4`
+const SAVED_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/tracks?limit=4`
 
 export async function getAuthorizationToken() {
 	const response = await fetch(AUTH_ENDPOINT, {
@@ -60,7 +64,29 @@ export const getTopArtists: () => Promise<
 
 	const { status } = response
 
-	log.info(`Status: ${status}`)
+	log.info(`Status for top artists: ${status}`)
+
+	if (status === 204) {
+		return {}
+	} else if (status === 200) {
+		const data = await response.json()
+		return data
+	}
+}
+
+export const getRecentlyLovedTracks: () => Promise<
+	SavedTracksResponse
+> = async () => {
+	const Authorization = await getAuthorizationToken()
+	const response = await fetch(SAVED_TRACKS_ENDPOINT, {
+		headers: {
+			Authorization,
+		},
+	})
+
+	const { status } = response
+
+	log.info(`Status for recently loved: ${status}`)
 
 	if (status === 204) {
 		return {}
