@@ -40,7 +40,9 @@ const getTopArtistsContent = async () => {
 		name: data.name,
 		url: data.external_urls.spotify,
 		image:
-			data.images.find((image) => image.height === 320)?.url ||
+			data.images
+				.sort((a, b) => a.width - b.width)
+				.find((image) => image.height > 320)?.url ||
 			data.images[0]?.url ||
 			"",
 	}))
