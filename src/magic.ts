@@ -69,8 +69,12 @@ const getRecentlyLovedContent = async () => {
 	const data = response.items.slice(0, 4).map((data) => {
 		const artists = data.track.album.artists
 			.map((artist) => artist.name)
-			.join(",")
-		const fullName = `${data.track.name}<br />${artists}`
+			.join(", ")
+		let trackName = `${data.track.name}`
+		if (trackName.length > 40) {
+			trackName = trackName.slice(0, 40)
+		}
+		const fullName = `${trackName}<br />${artists}`
 
 		return {
 			name: fullName,
@@ -116,8 +120,12 @@ const getRecentlyPlayedTracksContent = async () => {
 	const itemsData = items.slice(0, 4).map(async (data) => {
 		const artists = data.track.artists
 			.map((artist) => artist.name)
-			.join(",")
-		const fullName = `${data.track.name}<br />${artists}`
+			.join(", ")
+		let trackName = `${data.track.name}`
+		if (trackName.length > 40) {
+			trackName = trackName.slice(0, 40)
+		}
+		const fullName = `${trackName}<br />${artists}`
 
 		const artistData = await getArtistById(getArtist(data).id)
 
