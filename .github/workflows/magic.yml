@@ -25,7 +25,7 @@ jobs:
                   add: "README.md"
                   author_name: bitttttten
                   author_email: bitttttten@googlemail.com
-                  message: "updating reaedme"
+                  message: "updating readme"
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - name: Push changes
