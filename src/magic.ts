@@ -9,6 +9,8 @@ import {
 	getArtistById,
 } from "./spotify.ts"
 
+const trimString = (str: string) =>
+	str.length <= 30 ? str : `${str.slice(0, 29)}…`
 const generateHeader = (artist: LocalArtist) =>
 	`[${artist.name}](${artist.url})`
 const generateImage = (artist: LocalArtist) =>
@@ -48,7 +50,7 @@ const getTopArtistsContent = async () => {
 	const response = await getTopArtists()
 
 	const data = response.items.slice(0, 4).map((data) => ({
-		name: data.name,
+		name: trimString(data.name),
 		url: data.external_urls.spotify,
 		image:
 			data.images
@@ -67,13 +69,10 @@ const getRecentlyLovedContent = async () => {
 	const response = await getRecentlyLovedTracks()
 
 	const data = response.items.slice(0, 4).map((data) => {
-		const artists = data.track.album.artists
-			.map((artist) => artist.name)
-			.join(", ")
-		let trackName = `${data.track.name}`
-		if (trackName.length > 40) {
-			trackName = trackName.slice(0, 40)
-		}
+		const artists = trimString(
+			data.track.album.artists.map((artist) => artist.name).join(", ")
+		)
+		const trackName = trimString(`${data.track.name}`)
 		const fullName = `${trackName}<br />${artists}`
 
 		return {
@@ -118,13 +117,10 @@ const getRecentlyPlayedTracksContent = async () => {
 	// spotify doesn't return the artist image in recently listened to, so when we build the object
 	// we need to fetch the artist too
 	const itemsData = items.slice(0, 4).map(async (data) => {
-		const artists = data.track.artists
-			.map((artist) => artist.name)
-			.join(", ")
-		let trackName = `${data.track.name}`
-		if (trackName.length > 40) {
-			trackName = trackName.slice(0, 40)
-		}
+		const artists = trimString(
+			data.track.artists.map((artist) => artist.name).join(", ")
+		)
+		const trackName = trimString(`${data.track.name}`)
 		const fullName = `${trackName}<br />${artists}`
 
 		const artistData = await getArtistById(getArtist(data).id)
