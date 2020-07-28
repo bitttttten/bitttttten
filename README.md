@@ -3,7 +3,7 @@
 <summary align="center"><samp>all the 🥚s</samp></summary>
 <hr />
 
-
+<a href="https://github.com/bitttttten"><img src="https://avatars2.githubusercontent.com/u/19930241?s=90&u=2aef7cbf4a59d361894145c97676391ec46fea4d&v=4" width="30" height="30" />
 
 <samp><a href="https://github.com/bitttttten/bitttttten/issues/1">become an 🥚</a></samp>
 
