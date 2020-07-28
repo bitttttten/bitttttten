@@ -1,8 +1,5 @@
 import * as log from "https://deno.land/std/log/mod.ts"
-import { config } from "https://deno.land/x/dotenv/mod.ts"
 import { GithubRepository } from "../types/types.d.ts"
-
-config({ export: true })
 
 const GITHUB_TOKEN = Deno.env.get("GITHUB_TOKEN")
 const Authorization = `Bearer ${GITHUB_TOKEN}`

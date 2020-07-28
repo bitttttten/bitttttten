@@ -18,6 +18,7 @@ jobs:
                   SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
                   SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
                   SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   deno run --allow-read=./src,./types,.env,.env.defaults,README.template.md --allow-write --allow-env --allow-net --unstable src/magic.ts
             - uses: EndBug/add-and-commit@v4
