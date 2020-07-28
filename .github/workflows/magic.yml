@@ -9,7 +9,7 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@master
+            - uses: actions/checkout@main
             - uses: denolib/setup-deno@v2
               with:
                   deno-version: v1.x
@@ -29,6 +29,6 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - name: Push changes
-              uses: ad-m/github-push-action@master
+              uses: ad-m/github-push-action@main
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
