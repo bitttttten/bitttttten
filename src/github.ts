@@ -1,7 +1,11 @@
 import * as log from "https://deno.land/std/log/mod.ts"
+import { config } from "https://deno.land/x/dotenv/mod.ts"
 import { GithubRepository } from "../types/types.d.ts"
 
-const Authorization = `Bearer 8853b83c16d38d9f1982de9b8d206a62eea10624`
+config({ export: true })
+
+const GITHUB_TOKEN = Deno.env.get("GITHUB_TOKEN")
+const Authorization = `Bearer ${GITHUB_TOKEN}`
 
 const query = `
 query {
