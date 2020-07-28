@@ -1,12 +1,14 @@
 import { readFileStr } from "https://deno.land/std/fs/mod.ts"
+import * as log from "https://deno.land/std/log/mod.ts"
 import { writeFileStr } from "https://deno.land/std@0.61.0/fs/write_file_str.ts"
 import { Markdown } from "https://deno.land/x/deno_markdown/mod.ts"
 import { LocalArtist, RecentlyPlayedTracksItem } from "../types/types.d.ts"
+import { getEggs } from "./github.ts"
 import {
-	getTopArtists,
+	getArtistById,
 	getRecentlyLovedTracks,
 	getRecentlyPlayedTracks,
-	getArtistById,
+	getTopArtists,
 } from "./spotify.ts"
 
 const trimString = (str: string) =>
@@ -16,14 +18,20 @@ const generateHeader = (artist: LocalArtist) =>
 const generateImage = (artist: LocalArtist) =>
 	`[<img src="${artist.image}" width="320" height="auto">](${artist.url})`
 
-const generateTemplate: (data: {
-	topArtists: string
+interface GenerateTemplateProps {
 	recentlyListening: string
+	topArtists: string
 	recentlyLoved: string
-}) => Promise<void> = async ({
+	eggs: string
+}
+
+const generateTemplate: (
+	data: GenerateTemplateProps
+) => Promise<void> = async ({
 	recentlyListening,
 	topArtists,
 	recentlyLoved,
+	eggs,
 }) => {
 	const template = await readFileStr("./README.template.md")
 
@@ -31,6 +39,7 @@ const generateTemplate: (data: {
 		.replace("<!-- topartists -->", topArtists)
 		.replace("<!-- recentlylistening -->", recentlyListening)
 		.replace("<!-- recentlyloved -->", recentlyLoved)
+		.replace("<!-- eggs -->", eggs)
 
 	await writeFileStr("./README.md", readme)
 }
@@ -144,16 +153,37 @@ const getRecentlyPlayedTracksContent = async () => {
 	return table
 }
 
+const getEggsContent = async () => {
+	const eggs = await getEggs()
+
+	const images = eggs
+		.map(
+			(egg) =>
+				`<a href="${egg.url}"><img src="${egg.avatarUrl}" width="30" height="30" />`
+		)
+		.join("")
+
+	return images
+}
+
 const magic = async () => {
 	const topArtists = await getTopArtistsContent()
 	const recentlyLoved = await getRecentlyLovedContent()
 	const recentlyPlayed = await getRecentlyPlayedTracksContent()
+	const eggs = await getEggsContent()
 
-	await generateTemplate({
-		topArtists,
-		recentlyListening: recentlyPlayed,
-		recentlyLoved,
-	})
+	try {
+		await generateTemplate({
+			topArtists,
+			recentlyListening: recentlyPlayed,
+			recentlyLoved,
+			eggs,
+		})
+	} catch (e) {
+		log.error(
+			`Big oof.. something went wrong when writing to the template: ${e}`
+		)
+	}
 }
 
 magic()

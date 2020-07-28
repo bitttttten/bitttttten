@@ -1,3 +1,12 @@
+<summary align="center"><samp>all the 🥚s</samp></summary>
+<hr />
+
+<!-- eggs -->
+
+<samp><a href="https://github.com/bitttttten/bitttttten/issues/1">become an 🥚</a></samp>
+
+</details>
+
 <details open>
 
 <summary align="center"><samp>my favourite music at the moment 🎵🎶</samp></summary>
