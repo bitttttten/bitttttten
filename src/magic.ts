@@ -1,5 +1,5 @@
-import { readFileStr } from "https://deno.land/std/fs/mod.ts"
 import * as log from "https://deno.land/std/log/mod.ts"
+import { readFileStr } from "https://deno.land/std@0.61.0/fs/mod.ts"
 import { writeFileStr } from "https://deno.land/std@0.61.0/fs/write_file_str.ts"
 import { Markdown } from "https://deno.land/x/deno_markdown/mod.ts"
 import { LocalArtist, RecentlyPlayedTracksItem } from "../types/types.d.ts"
