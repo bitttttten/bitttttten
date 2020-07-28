@@ -195,3 +195,38 @@ export interface ArtistByIdResponse {
 	type: string
 	uri: string
 }
+
+export namespace GithubRepository {
+	export interface User {
+		avatarUrl: string
+		url: string
+	}
+
+	export interface Node {
+		user: User
+	}
+
+	export interface Edge {
+		node: Node
+	}
+
+	export interface Reactions {
+		edges: Edge[]
+	}
+
+	export interface Issue {
+		reactions: Reactions
+	}
+
+	export interface Repository {
+		issue: Issue
+	}
+
+	export interface Data {
+		repository: Repository
+	}
+
+	export interface Response {
+		data: Data
+	}
+}
