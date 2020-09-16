@@ -1,6 +1,6 @@
 import { Base64 } from "https://deno.land/x/bb64/mod.ts"
 import { config } from "https://deno.land/x/dotenv/mod.ts"
-import {
+import type {
 	SpotifyTopArtistsResponse,
 	SavedTracksResponse,
 	RecentlyPlayedTracksResponse,
