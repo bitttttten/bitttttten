@@ -48,10 +48,14 @@ const fetcher: <T>(url: string) => Promise<T> = async (url) => {
 
 	if (status === 204) {
 		return {}
-	} else if (status === 200) {
+	}
+
+	if (status === 200) {
 		const data = await response.json()
 		return data
 	}
+
+	throw new Error(`Unknown status for ${url}: ${status}`)
 }
 
 export async function getAuthorizationToken() {
