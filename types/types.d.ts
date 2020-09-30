@@ -218,8 +218,13 @@ export namespace GithubRepository {
 		reactions: Reactions
 	}
 
+	export interface Stargazers {
+		nodes: Node[]
+	}
+
 	export interface Repository {
 		issue: Issue
+		stargazers: Stargazers
 	}
 
 	export interface Data {

@@ -6,21 +6,27 @@ const Authorization = `Bearer ${GITHUB_TOKEN}`
 
 const query = `
 query {
-    repository(owner: "bitttttten", name: "bitttttten") {
-      issue(number: 1) {
-        reactions(first: 100) {
-          edges {
-            node {
-              user {
-                avatarUrl(size: 90) 
-                url
-              }
-            }
-          }
-        }
-      }
-    }
-  }  
+	repository(owner: "bitttttten", name: "bitttttten") {
+	  stargazers(first: 100) {
+		nodes {
+		  avatarUrl(size: 90)
+		  url
+		}
+	  }
+	  issue(number: 1) {
+		reactions(first: 100) {
+		  edges {
+			node {
+			  user {
+				avatarUrl(size: 90)
+				url
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
 `
 
 export const getEggs = async () => {
