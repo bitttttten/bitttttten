@@ -202,28 +202,11 @@ export namespace GithubRepository {
 		url: string
 	}
 
-	export interface Node {
-		user: User
-	}
-
-	export interface Edge {
-		node: Node
-	}
-
-	export interface Reactions {
-		edges: Edge[]
-	}
-
-	export interface Issue {
-		reactions: Reactions
-	}
-
 	export interface Stargazers {
-		nodes: Node[]
+		nodes: User[]
 	}
 
 	export interface Repository {
-		issue: Issue
 		stargazers: Stargazers
 	}
 

@@ -5,7 +5,7 @@
 
 <!-- eggs -->
 
-<samp><a href="https://github.com/bitttttten/bitttttten/issues/1">become an 🥚</a></samp>
+<samp><a href="https://github.com/bitttttten/bitttttten/stargazers">become an 🥚</a></samp>
 
 </details>
 

@@ -1,28 +1,19 @@
 import * as log from "https://deno.land/std/log/mod.ts"
+import { config } from "https://deno.land/x/dotenv/mod.ts"
 import type { GithubRepository } from "../types/types.d.ts"
+
+config({ export: true })
 
 const GITHUB_TOKEN = Deno.env.get("GITHUB_TOKEN")
 const Authorization = `Bearer ${GITHUB_TOKEN}`
 
 const query = `
-query {
+  query {
 	repository(owner: "bitttttten", name: "bitttttten") {
 	  stargazers(first: 100) {
 		nodes {
 		  avatarUrl(size: 90)
 		  url
-		}
-	  }
-	  issue(number: 1) {
-		reactions(first: 100) {
-		  edges {
-			node {
-			  user {
-				avatarUrl(size: 90)
-				url
-			  }
-			}
-		  }
 		}
 	  }
 	}
@@ -43,9 +34,7 @@ export const getEggs = async () => {
 
 		const json = (await response.json()) as GithubRepository.Response
 
-		return json.data.repository.issue.reactions.edges.map(
-			(edge) => edge.node.user
-		)
+		return json.data.repository.stargazers.nodes
 	} catch (e) {
 		log.error(`Could not fetch data from Github: ${e}`)
 		return []
