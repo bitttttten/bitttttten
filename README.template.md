@@ -1,4 +1,4 @@
-<details>
+<details open>
 
 <summary align="center"><samp>all the 🥚s</samp></summary>
 <hr />
