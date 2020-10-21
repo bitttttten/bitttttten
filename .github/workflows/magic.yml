@@ -4,6 +4,8 @@ on:
     schedule:
         - cron: "0 11,17,21 * * *"
     workflow_dispatch:
+    watch:
+        types: [started]
 
 jobs:
     build:
