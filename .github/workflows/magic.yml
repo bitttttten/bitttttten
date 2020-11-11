@@ -26,8 +26,8 @@ jobs:
             - uses: EndBug/add-and-commit@v4
               with:
                   add: "README.md"
-                  author_name: bitttttten
-                  author_email: bitttttten@googlemail.com
+                  author_name: anonymous
+                  author_email: anonymous@anonymous.com
                   message: "updating readme"
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
