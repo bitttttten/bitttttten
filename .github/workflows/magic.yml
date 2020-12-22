@@ -2,7 +2,7 @@ name: do the magic
 
 on:
     schedule:
-        - cron: "0 11,17,21 * * *"
+        - cron: "0 11 * * 2,4,6,7"
     workflow_dispatch:
     watch:
         types: [started]
