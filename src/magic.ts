@@ -172,6 +172,8 @@ const magic = async () => {
 	const recentlyPlayed = await getRecentlyPlayedTracksContent()
 	const eggs = await getEggsContent()
 
+	log.info({ eggs, topArtists, recentlyLoved, recentlyPlayed })
+
 	try {
 		await generateTemplate({
 			topArtists,
