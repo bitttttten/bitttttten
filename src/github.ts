@@ -8,16 +8,19 @@ const GITHUB_TOKEN = Deno.env.get("GITHUB_TOKEN")
 const Authorization = `Bearer ${GITHUB_TOKEN}`
 
 const query = `
-  query {
-	repository(owner: "bitttttten", name: "bitttttten") {
-	  stargazers(first: 100) {
-		nodes {
-		  avatarUrl(size: 90)
-		  url
-		}
-	  }
-	}
+query {
+  user(login: "bitttttten") {
+    followers(first: 250) {
+      edges {
+        node {
+          name
+          avatarUrl(size: 90)
+          url
+        }
+      }
+    }
   }
+}
 `
 
 export const getEggs = async () => {
@@ -32,9 +35,9 @@ export const getEggs = async () => {
 			body: JSON.stringify({ query }),
 		})
 
-		const json = (await response.json()) as GithubRepository.Response
+		const json = (await response.json()) as GithubRepository.Followers
 
-		return json.data.repository.stargazers.nodes
+		return json.data.user.followers.edges.map(({ node }) => node)
 	} catch (e) {
 		log.error(`Could not fetch data from Github: ${e}`)
 		return []

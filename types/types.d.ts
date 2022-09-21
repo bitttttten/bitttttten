@@ -196,6 +196,28 @@ export interface ArtistByIdResponse {
 	uri: string
 }
 
+export interface FollowerNode {
+	name: string;
+	avatarUrl: string;
+	url: string;
+}
+
+export interface FollowerEdge {
+	node: FollowerNode;
+}
+
+export interface Followers {
+	edges: FollowerEdge[];
+}
+
+export interface FollowerUser {
+	followers: Followers;
+}
+
+export interface FollowerData {
+	user: FollowerUser;
+}
+
 export namespace GithubRepository {
 	export interface User {
 		avatarUrl: string
@@ -216,5 +238,9 @@ export namespace GithubRepository {
 
 	export interface Response {
 		data: Data
+	}
+
+	export interface Followers {
+		data: FollowerData
 	}
 }
