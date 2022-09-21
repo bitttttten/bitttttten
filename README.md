@@ -3,9 +3,9 @@
 <summary align="center"><samp>all the 🥚s</samp></summary>
 <hr />
 
-<a href="https://github.com/pvinis"><img src="https://avatars.githubusercontent.com/u/100233?s=90&v=4" width="30" height="30" /><a href="https://github.com/maxPugh"><img src="https://avatars.githubusercontent.com/u/46350013?s=90&u=0a4fa85dd771891a2d293e910fa9ab51327cf434&v=4" width="30" height="30" />
 
-<samp><a href="https://github.com/bitttttten/bitttttten/stargazers">become an 🥚</a></samp>
+  
+<samp><a href="https://github.com/bitttttten">follow me to become an 🥚</a></samp>
 
 </details>
 
