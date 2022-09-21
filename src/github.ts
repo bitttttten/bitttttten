@@ -37,6 +37,9 @@ export const getEggs = async () => {
 
 		const json = (await response.json()) as GithubRepository.Followers
 
+		log.info(`Response from Github was ${response.status} with ${response.statusText}`)
+		log.info(`${json}`)
+
 		return json.data.user.followers.edges.map(({ node }) => node)
 	} catch (e) {
 		log.error(`Could not fetch data from Github: ${e}`)
