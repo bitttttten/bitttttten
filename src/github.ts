@@ -10,7 +10,7 @@ const Authorization = `Bearer ${GITHUB_TOKEN}`
 const query = `
 query {
   user(login: "bitttttten") {
-    followers(first: 250) {
+    followers(first: 100) {
       edges {
         node {
           name
