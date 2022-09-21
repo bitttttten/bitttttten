@@ -4,14 +4,8 @@
 <hr />
 
 <!-- eggs -->
-
-<form method="post" action="/users/follow?target=bitttttten">
-  <input type="submit">
-    become an 🥚
-  </input>
-</form>
   
-<samp><a href="https://github.com/bitttttten/bitttttten/stargazers">become an 🥚</a></samp>
+<samp><a href="https://github.com/bitttttten">follow me to become an 🥚</a></samp>
 
 </details>
 
