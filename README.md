@@ -31,9 +31,7 @@
 
 <!-- toc -->
 
-| [Olson (Version 3) - Peel Sess…<br />Boards of Canada](https://open.spotify.com/track/1UejHGKrz7g94qXiAsoNpV)                                                   | [Olson (Version 3) - Peel Sess…<br />Boards of Canada](https://open.spotify.com/track/1UejHGKrz7g94qXiAsoNpV)                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<img src="https://i.scdn.co/image/ab6761610000e5eb8d582d93756e158b968cc35d" width="320" height="auto">](https://open.spotify.com/track/1UejHGKrz7g94qXiAsoNpV) | [<img src="https://i.scdn.co/image/ab6761610000e5eb8d582d93756e158b968cc35d" width="320" height="auto">](https://open.spotify.com/track/1UejHGKrz7g94qXiAsoNpV) |
+
 
 <!-- tocstop -->
 
